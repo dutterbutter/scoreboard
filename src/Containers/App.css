@@ -29,6 +29,9 @@ body{
   padding-bottom: 35px;
 }
 
+.favText{
+  padding-top: 15px;
+}
 
 .App-intro {
   font-size: large;

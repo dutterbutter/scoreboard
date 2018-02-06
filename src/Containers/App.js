@@ -4,8 +4,9 @@ import axios from 'axios';
 import './App.css';
 import GameData from './GameData';
 import Details from '../Components/Details/Details'
-import MediaCoverage from '../Components/MediaCoverage/MediaCoverage';
 import DayPicker from '../Components/DayPicker';
+import FavTeamInput from '../Components/Games/FavTeamInput';
+
 
 class App extends React.Component {
     constructor() {
@@ -35,10 +36,10 @@ class App extends React.Component {
 
     //Slices out Month,Day,Year for gameDayHandler and calls it
     dateParserHandler = (selectedDate) => {
- 
-        let dayDigit  = JSON.stringify(selectedDate).slice(17, 19)
-        let month     = JSON.stringify(selectedDate).slice(14, 16)
-        let year      = JSON.stringify(selectedDate).slice(9, 13)
+
+        let dayDigit = JSON.stringify(selectedDate).slice(17, 19)
+        let month = JSON.stringify(selectedDate).slice(14, 16)
+        let year = JSON.stringify(selectedDate).slice(9, 13)
 
         this.gameDayHandler(dayDigit, month, year)
     }
@@ -71,6 +72,12 @@ class App extends React.Component {
             })
     }
 
+    favoriteTeamHandler = (team) => {
+        this.setState({
+            favoriteTeam: team
+        })
+    }
+
     render() {
 
         return (
@@ -79,14 +86,21 @@ class App extends React.Component {
                     <h1>Scoreboard App</h1>
 
                     <div className="container daypicker left-align">
-                        <DayPicker
+                        <div className="daypicker"> <DayPicker
                             dateParserHandler={this.dateParserHandler} />
+                        </div>
+
+                        <div className="favoriteTeam">
+                            <FavTeamInput
+                                favoriteTeamHandler={this.favoriteTeamHandler} />
+                            <div className="favText">Current Favorite Team: {this.state.favoriteTeam}</div>
+                        </div>
                     </div>
 
                     <div className="container left-align">
                         <Link to="/"><button>Back</button></Link>
-
                     </div>
+
                     <Route path="/" exact render={({ match }) =>
                         <GameData
                             gameData={this.state.gameData}
@@ -100,12 +114,6 @@ class App extends React.Component {
                             match={match}
                             detailData={this.state.detailsData}
                             innings={this.state.detailsData.linescore} />}
-                    />
-
-                    <Route path='/game-media' render={({ match }) =>
-                        <MediaCoverage
-                            match={match}
-                            gameData={this.state.gameData} />}
                     />
                 </div>
             </BrowserRouter>

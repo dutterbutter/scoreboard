@@ -2,16 +2,18 @@ import React from 'react'
 import Venue from './Venue'
 import './ScoreCard.css';
 import BoxscoreTrigger from './BoxscoreTrigger';
-import Media from './Media';
+
 
 //Need to dynamically determine number of TR for each table for colspan
 //Need to work on <Media component
 
 const bottomCard = (props) => {
 
-    // let rowCount = document.getElementById("mainTable").rows.length
-    // console.log(rowCount);
-    { props.status ? props.status : 'Cancelled'}
+    { props.status ?
+        props.status
+        : 
+        'Cancelled'
+    }
     return (
         <tbody>
             <tr>
@@ -25,15 +27,10 @@ const bottomCard = (props) => {
                 </td>
             </tr>
             <tr>
-                <td className="boxscore" colSpan="6">
+                <td className="boxscore" colSpan="13">
                     <BoxscoreTrigger
                         game_data_directory={props.game_data_directory}
                         detailHandler={props.detailHandler} />
-                </td>
-                <td className="boxscore" colSpan="7">
-                    <Media
-                        links = {props.links}
-                        media = {props.media} />
                 </td>
             </tr>
         </tbody>

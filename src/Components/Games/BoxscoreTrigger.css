@@ -1,7 +1,7 @@
 .material-icons {
     padding-top: 10px;
     vertical-align: middle;
-    margin-left: 48%;
+    margin-left: 49%;
     
 }
 .boxscore {
@@ -13,5 +13,5 @@
     border: .5px solid #e5e3e3;
 }
 .boxscore:hover{
-    background-color: azure;
+    background-color: #606060;
 }

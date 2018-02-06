@@ -1,5 +1,5 @@
 import React from 'react';
-
+import BattersSwitch from './BattersSwitch.css';
 //Component creates the AWAY teams batting roster in a TABLE format
 //Receives PROPS from <Details component 
 //KEY INDEX is still giving me a WARNING need to generate a random number to make them unique
@@ -7,16 +7,16 @@ import React from 'react';
 const batters_away = (props) => {
     
     const batters_names = props.batting.map((batter, index) => {
-        return <tr><td key={index}> {batter.name} {batter.pos}</td>
-                     <td key={index}>  {batter.ab} </td>
-                     <td key={index}>   {batter.r}  </td>
-                     <td key={index}>   {batter.h}  </td>
-                     <td key={index}>   {batter.rbi}</td>
-                     <td key={index}>  {batter.bb} </td>
-                     <td key={index}>  {batter.so} </td>
-                     <td key={index}>  {batter.lob}</td>
-                     <td key={index}>  {batter.avg}</td>
-                     <td key={index}>  {batter.ops}</td>
+        return <tr key= {index++}><td key={index}> {batter.name} {batter.pos}</td>
+                     <td key={99}>  {batter.ab} </td>
+                     <td key={98}>   {batter.r}  </td>
+                     <td key={97}>   {batter.h}  </td>
+                     <td key={96}>   {batter.rbi}</td>
+                     <td key={95}>  {batter.bb} </td>
+                     <td key={94}>  {batter.so} </td>
+                     <td key={93}>  {batter.lob}</td>
+                     <td key={92}>  {batter.avg}</td>
+                     <td key={91}>  {batter.ops}</td>
             </tr>
     })
 
@@ -37,7 +37,7 @@ const batters_away = (props) => {
                         <th> OPS </th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody >
                    {batters_names}
                 </tbody>
             </table>
