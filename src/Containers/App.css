@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+}
+
+.card{
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.react-date-picker__calendar { 
+  z-index: 99;
+}
+
+.daypicker{
+  padding-bottom: 35px;
+}
+
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
