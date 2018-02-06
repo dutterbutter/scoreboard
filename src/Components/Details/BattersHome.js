@@ -1,5 +1,5 @@
 import React from 'react';
-import BattersSwitch from './BattersSwitch.css';
+
 //Component creates the HOME teams batting roster in a TABLE format
 //Receives PROPS from <Details component 
 //KEY INDEX is still giving me a WARNING need to generate a random number to make them unique

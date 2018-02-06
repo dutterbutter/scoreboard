@@ -4,7 +4,7 @@ import BattersHome from './BattersHome';
 import BattersAway from './BattersAway';
 import Loading from './Loading';
 import FinalScoreDisplay from './FinalScoreDisplay';
-import BattersSwitch from './BattersSwitch';
+
 
 //Page renders through router/link, triggered by onclick 
 //Data is passed from App.js 
