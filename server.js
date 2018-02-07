@@ -30,8 +30,6 @@ app.post('/day', (req, res) => {
     let day     = req.body.day;
     let month   = req.body.month;
     let year    = req.body.year;
-
-    console.log(day, month, year)
     
     let baseURL = givenURL + year + '/month_' + month + '/day_' + day + endURL
     return axios.get(baseURL)

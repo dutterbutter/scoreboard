@@ -14,12 +14,12 @@ const favTeamInput = (props) => {
 
 
     return (
-        <div>
+        <React.Fragment>
             <a className='dropdown-button btn' href='#' data-activates='dropdown1'>Fav Team Picker</a>
             <ul id='dropdown1' className='dropdown-content'>
                 {teamPicker}
             </ul>
-        </div>
+        </React.Fragment>
     )
 }
 
