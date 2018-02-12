@@ -17,6 +17,7 @@ class App extends React.Component {
             detailsData: [],
             isEmpty: false
         }
+        
         this.dateParserHandler = this.dateParserHandler.bind(this);
     }
 
