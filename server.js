@@ -15,7 +15,7 @@ let boxScoreUrl     = "http://gd2.mlb.com";
 let setURL          = "http://gd2.mlb.com/components/game/mlb/year_2017/month_09/day_29/master_scoreboard.json";
 
 app.get("/", (req, res) => {
-    return axios.get(setURL)
+    return axios.get(setURL);
 
     .then(response => {
         result = response.data;
