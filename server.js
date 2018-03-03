@@ -16,7 +16,6 @@ let setURL          = "http://gd2.mlb.com/components/game/mlb/year_2017/month_09
 
 app.get("/", (req, res) => {
     return axios.get(setURL);
-
     .then(response => {
         result = response.data;
         res.send(result.data)
@@ -45,7 +44,6 @@ app.post('/day', (req, res) => {
 
 app.post("/game-details", (req, res) => {
     let game_data_directory = req.body.game_data_directory;
-
     return axios.get(boxScoreUrl + game_data_directory + boxScoreUrlEnd)
 
     .then(response => {
